@@ -1,8 +1,5 @@
 struct ListNode* swapPairs(struct ListNode* head) {
-    struct ListNode* temp = (struct ListNode*)malloc(sizeof(struct ListNode));
-    struct ListNode* temp1 = (struct ListNode*)malloc(sizeof(struct ListNode));
-    struct ListNode* temp2 = (struct ListNode*)malloc(sizeof(struct ListNode));
-    struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
+   struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
     dummy->next = head;
     temp = dummy;
     temp1 = head;
