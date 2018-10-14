@@ -1,0 +1,30 @@
+I begin to know greedy is due to JumpGame, LeetCode 55.
+My solution is showed below, of course it is wrong.
+```
+class Solution {
+    public boolean canJump(int[] nums) {
+        if (nums.length != 1 && nums[0] == 0)
+            return false;
+        else
+            return canJump1(nums, 0);
+    }
+    int k = 10000;
+    boolean canJump1(int[] nums, int i) {
+        if (i > nums.length - 2)
+            return true;       
+        else if (nums[i] == 0 && k == nums[i - k]) { //最大长度
+            return false;
+        }
+        else if (nums[i] != 0) {
+            for (k = 1; k <= nums[i]; k++)
+                return canJump1(nums, i + k);
+        }
+        else if (nums[i] == 0) {
+            return canJump1(nums, i + 1);
+        }
+        return false;
+    }
+}
+```
+I find it takes a really tough time to reach the destination because the recursive return condition is hard to set.
+And then I achieve some little progress by reading the solution.
