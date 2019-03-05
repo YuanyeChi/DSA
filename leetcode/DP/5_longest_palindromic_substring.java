@@ -1,4 +1,4 @@
-Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+/**Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
 Example 1:
 
@@ -9,6 +9,7 @@ Example 2:
 
 Input: "cbbd"
 Output: "bb"
+*/
 
 class Solution {
     public String longestPalindrome(String s) {
