@@ -18,7 +18,7 @@ class Solution {
 		put(7, "pqrs");
 		put(8, "tuv");
 		put(9, "wxyz");
-	}};
+	}};//注意在方法之外只能进行数据域的初始化，不能进行赋值
 	public List<String> letterCombinations(String digits) {
 		List<String> res = new ArrayList<>();
 		if (digits.length() < 1) return res;
