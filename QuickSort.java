@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class QuickSort {
 	public static void main(String[] args) {
-		System.out.println("Please enter the length of array:");
-		Scanner scanner = new Scanner(System.in); 
-		int len = scanner.nextInt();
+		//System.out.println("Please enter the length of array:");
+		//Scanner scanner = new Scanner(System.in); 
+		int len = 100;
 		int a[] = new int [len];
-		System.out.println("Please enter the numbers you want to sort");
+		//System.out.println("Please enter the numbers you want to sort");
 		for (int i = 0; i < len; i ++) {
-			a[i] = scanner.nextInt();
+			a[i] = (int)(Math.random() * 100) + 1;
 		}
 		quickSort(a, 0, a.length - 1);
 		System.out.println(Arrays.toString(a));
