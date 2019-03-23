@@ -17,7 +17,6 @@ public class EvaluateExpression {
     }
   }
 
-  /** Evaluate an expression */
   public static int evaluateExpression(String expression) {
     // Create operandStack to store operands
     Stack<Integer> operandStack = new Stack<>();
@@ -70,7 +69,7 @@ public class EvaluateExpression {
         
         operatorStack.pop(); // Pop the '(' symbol from the stack
       }
-      else { // An operand scanned
+      else {
         // Push an operand to the stack
         operandStack.push(new Integer(token));
       }
@@ -85,8 +84,6 @@ public class EvaluateExpression {
     return operandStack.pop();
   }
 
-  /** Process one operator: Take an operator from operatorStack and
-   *  apply it on the operands in the operandStack */
   public static void processAnOperator(
       Stack<Integer> operandStack, Stack<Character> operatorStack) {
     char op = operatorStack.pop();
