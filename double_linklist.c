@@ -30,8 +30,9 @@ NODE* add(NODE* node, DATA data) {
     temp->data = data;
     temp->next = node;
 	temp->pre = NULL;
-	if (node != NULL)
+	if (node != NULL) {
 		node->pre = temp;
+	}
 	node = temp;
     return node;
 }
@@ -42,10 +43,12 @@ void add_at(NODE* node, DATA data) {
         exit(EXIT_FAILURE);
     }
     temp->data = data;
-    temp->next = node;
-    temp->pre = node->pre;
+	temp->next = node;
+	temp->pre = node->pre;
 	node->pre->next = temp;
 	node->pre = temp;
+	
+	
 }
 
 void remove_node(NODE* node) {
@@ -100,7 +103,7 @@ NODE *sort_list(NODE* head) {
 
 int main(int argc, char* argv[]) {
    int i, j;
-NODE* head;
+   NODE* head;
    NODE* node;
    DATA element;
    printf("Add 10 random elements to the linklist:\n");
@@ -131,16 +134,21 @@ NODE* head;
    print_list(head);
    //add
    printf("\nWhich place do you want to add a number?\n");
-   printf("Please enter a number:");
+   printf("Please enter a place:");
    scanf("%d", &j);
-   printf("please enter a place:");
+   printf("please enter a number:");
    scanf("%d", &(element.info));
    node = head;
    while ((j-1) != 0) {
        node = node->next;
        j--;
    }
-   add_at(node, element);
+   if (node == head) {
+	   head = add(head,element);
+   }
+   else{
+	   add_at(node, element);
+   }
    print_list(head);
    printf("\n");
    head = sort_list(head);
