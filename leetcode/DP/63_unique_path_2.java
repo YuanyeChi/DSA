@@ -1,4 +1,7 @@
 /*63. Unique Paths II
+
+medium
+
 A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
 
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
@@ -25,8 +28,8 @@ There are two ways to reach the bottom-right corner:
 2. Down -> Down -> Right -> Right*/
 class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        int R = obstacleGrid.length;
-        int C = obstacleGrid[0].length;
+        int R = obstacleGrid.length;//rowcount
+        int C = obstacleGrid[0].length;//colcount	
         
         if (obstacleGrid[0][0] == 1) {
             return 0;

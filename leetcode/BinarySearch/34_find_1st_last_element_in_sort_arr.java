@@ -65,10 +65,8 @@ class Solution {
         }
 
         targetRange[0] = leftIdx;
-        targetRange[1] = extremeInsertionIndex(nums, target, false)-1;
+        targetRange[1] = extremeInsertionIndex(nums, target, false) - 1;
 
         return targetRange;
     }
-}y Search
-
-
+}
