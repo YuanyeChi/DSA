@@ -1,10 +1,29 @@
+
+/*144. Binary Tree Preorder Traversal
+Medium
+
+Favorite
+
+Share
+Given a binary tree, return the preorder traversal of its nodes' values.
+
+Example:
+
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,2,3]
 public class TreeNode {
 	int val;
 	TreeNode left;
 	TreeNode right;
 	TreeNode(int x) { val = x; }
 }
-
+*/
 //recursion 1 pay attention to addAll
 class Solution {
 	public List<Integer> preorderTraversal(TreeNode root) {

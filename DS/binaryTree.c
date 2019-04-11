@@ -40,7 +40,7 @@ void inorder(tree *root) {
   printf("%d ",root->data);
   inorder(root->right);
 }
-
+}
 void postorder(tree *root) {
 
   if(root == NULL) 
