@@ -1,5 +1,3 @@
-package com.interview.graph;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
