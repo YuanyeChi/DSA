@@ -39,7 +39,7 @@ public class MergeSort {
 		while (i <= q) {
 			temp[k++] = a[i++];
 		}
-		while (j <=r) {
+		while (j <= r) {
 			temp[k++] = a[j++];
 		}
 		for (int k2 = 0; k2 < temp.length; k2++) {
