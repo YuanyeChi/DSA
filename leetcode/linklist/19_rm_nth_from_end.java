@@ -1,5 +1,7 @@
 /*
 19. Remove Nth Node From End of List
+medium
+
 Given a linked list, remove the n-th node from the end of list and return its head.
 
 Example:
@@ -59,7 +61,7 @@ class Solution {
 //faster than 100% 
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-            ListNode dummy = new ListNode(0);
+        ListNode dummy = new ListNode(0);
         dummy.next = head;
         int length  = 0;
         ListNode first = head;
